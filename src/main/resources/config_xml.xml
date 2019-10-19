@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cameraRoll" class="ru.geekbrains.lesson1.xml.ColorCameraRoll" />
+
+    <bean id="camera" class="ru.geekbrains.lesson1.xml.CameraImpl">
+        <property name="cameraRoll">
+            <ref bean="cameraRoll" />
+        </property>
+    </bean>
+
+<!--    <bean id="helloMan" class="ru.geekbrains.lesson1.xml.HelloManOnceSay">-->
+<!--        <constructor-arg value="Yuri" />-->
+<!--    </bean>-->
+
+<!--    <bean id="helloMan" class="ru.geekbrains.lesson1.xml.HelloManOnceSay">-->
+<!--        <constructor-arg type="java.lang.String" index="0" value="Maria" />-->
+<!--    </bean>-->
+
+    <bean id="helloMan" class="ru.geekbrains.lesson1.xml.HelloManOnceSay">
+        <property name="name" value="Anna" />
+    </bean>
+
+
+</beans>
